@@ -1,2 +1,5 @@
-django_proyect/settings.py
+django_proyect/secret_settings.py
+__pycache__/
+*.pyc
 .vscode
+db.sqlite3
