@@ -22,9 +22,9 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ['DEBUG_VALUE']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['clavepuerta.herokuapp.com']
 
 
 # Application definition

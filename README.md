@@ -5,3 +5,4 @@ Code based on the great tutorial of [Corey Schafer](https://www.youtube.com/watc
 
 TODO:
 -add instructions to create DB
+-add working email to reset password
