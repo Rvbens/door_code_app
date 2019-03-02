@@ -31,6 +31,9 @@
                 <!-- Navbar Right Side -->
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="{% url 'profile' %}">Perfil</a>
+                    {% if request.user.is_active and request.user.is_staff %}
+                    <a class="nav-item nav-link" href="/admin">Panel de control</a>
+                    {% endif %}
                     <a class="nav-item nav-link" href="{% url 'logout' %}">Cerrar sesión</a>
                 </div>
             </div>
