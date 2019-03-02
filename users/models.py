@@ -18,3 +18,7 @@ class Profile(models.Model):
             output_size = (300,300)
             img.thumbnail(output_size)
             img.save(self.image.path)
+
+class UserCreation(User):
+    phone = models.CharField('Teléfono', max_length=20)
+    phone.help_text = "Teléfono con el que nos conactaste, para confirmar su identidad"

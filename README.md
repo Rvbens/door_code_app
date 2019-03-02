@@ -7,4 +7,3 @@ Code based on the great tutorial of [Corey Schafer](https://www.youtube.com/watc
 TODO:
 -add account confirmation done by staff
 -block user name change
--add contact info on registration
