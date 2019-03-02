@@ -19,6 +19,6 @@ class Profile(models.Model):
             img.thumbnail(output_size)
             img.save(self.image.path)
 
-class UserCreation(User):
+class CustomUser(User):
     phone = models.CharField('Teléfono', max_length=20)
-    phone.help_text = "Teléfono con el que nos conactaste, para confirmar su identidad"
+    phone.help_text = "Teléfono con el que nos contactaste, para confirmar su identidad a la hora de activar la cuenta."
