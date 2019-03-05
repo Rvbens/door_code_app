@@ -18,7 +18,7 @@ class UserRegisterForm(UserCreationForm):
         user.is_active = False
         
         send_mail(
-            'Nuevo usuario creado: '+user.username,
+            f'Nuevo usuario creado: {user.username}',
             'Comprueba los datos y activa la cuenta si procede.',
             settings.EMAIL_HOST_USER,
             [settings.EMAIL_ADMIN],

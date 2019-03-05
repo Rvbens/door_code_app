@@ -5,7 +5,10 @@ Basic django app to manage the PIN of a door.
 Code based on the great tutorial of [Corey Schafer](https://www.youtube.com/watch?v=1PkNiYlkkjo&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=4)
 
 TODO:
--email user when account activated
--block user name change
+
+- block user name change
+- email for one account only
 
 DEPLOYEMENT:
+
+- set variables
