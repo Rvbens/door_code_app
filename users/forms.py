@@ -11,6 +11,12 @@ class UserRegisterForm(UserCreationForm):
     class Meta:
         model  = CustomUser
         fields = ["username", "email", 'phone', 'first_name', 'last_name', "password1", "password2"]
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        username = self.cleaned_data.get('username')
+        if email and User.objects.filter(email=email).exclude(username=username).exists():
+            raise forms.ValidationError(u'Dirección de correo ya en uso.')
+        return email
 
     def save(self, commit=True):
         user = super(UserCreationForm, self).save(commit=False)
@@ -34,7 +40,7 @@ class UserUpdateForm(forms.ModelForm):
 
     class Meta:
         model  = CustomUser
-        fields = ["username", "email", 'phone', 'first_name', 'last_name',]    
+        fields = ["email", 'first_name', 'last_name',]    
 
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
