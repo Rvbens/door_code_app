@@ -6,6 +6,7 @@ Code based on the great tutorial of [Corey Schafer](https://www.youtube.com/watc
 
 TODO:
 
+- User login log
 - Deploy!
 - To phone
 

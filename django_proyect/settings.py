@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 import django_heroku
 
-#from .secret_settings import * # DEVELOPMENT
+from .secret_settings import * # DEVELOPMENT
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG_VALUE')=='True')
 
-ALLOWED_HOSTS = ['clavepuerta.herokuapp.com']
+ALLOWED_HOSTS = ['codigopin.herokuapp.com']
 
 
 # Application definition
