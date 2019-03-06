@@ -10,7 +10,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get("username")
-            messages.success(request, f'Cuenta creada. Espere a que sea confirmada por un administrador para entrar.')
+            messages.success(request, f'Cuenta creada. Espere a que sea activada por un administrador para entrar.')
             return redirect("login")
         
     else:
