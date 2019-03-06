@@ -6,7 +6,8 @@ Code based on the great tutorial of [Corey Schafer](https://www.youtube.com/watc
 
 TODO:
 
-- add message for failed login if acc not activated
+- Deploy!
+- To phone
 
 DEPLOYEMENT:
 

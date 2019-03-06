@@ -86,3 +86,25 @@ body {
   .azul{
     color:rgb(0, 114, 190);
   }
+
+  .collapsible {
+    cursor: pointer;
+    padding: 18px;
+    padding-left:0.5rem;
+    /**width: 50%;**/
+    border: none;
+    text-align: left;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  .active-col, .collapsible:hover {
+    background-color: rgb(214, 214, 214);
+  }
+  
+  .content-colap {
+    padding: 18px 18px 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
