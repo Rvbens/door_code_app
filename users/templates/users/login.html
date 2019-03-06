@@ -17,8 +17,30 @@
             </div>
         </form>
         <div class="border-top pt-3">
-            <small class="text-muted"><a class="ml-2" href="{% url 'register' %}">¿Necesitas una cuenta?  Regístrate</a>
+            <small class="text-muted"><a class="ml-2" href="{% url 'register' %}">¿Necesitas una cuenta?  Regístrate</a></small><br>
+            <small class="text-muted"><button class="collapsible">¿Por qué mi cuenta sale como inactiva?</button>
+                <div class="content-colap">
+                    <p>Las cuentas son activadas manualmente por motivos de seguirdad para que no todo el mundo tenga acceso al PIN de la puerta. 
+                        Si su cuenta sale como inactiva tenga paciencia y espere a que un administrador revise y active su cuenta./p>
+                </div>
             </small>
+            
         </div>
     </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active-col");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
 {% endblock content %}
