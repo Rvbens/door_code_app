@@ -7,7 +7,7 @@ Code based on the great tutorial of [Corey Schafer](https://www.youtube.com/watc
 TODO:
 
 - Deploy!
-- To phone
+- Port to phone
 
 DEPLOYEMENT:
 
