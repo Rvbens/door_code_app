@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, UpdateView
 from .models import Post
 
-class PostListView(LoginRequiredMixin, ListView):
+class HomeView(LoginRequiredMixin, ListView):
     model = Post
     template_name = "blog/home.html"
     context_object_name = "posts"
