@@ -6,7 +6,7 @@ Code based on the great tutorial of [Corey Schafer](https://www.youtube.com/watc
 
 TODO:
 
-- User login log
+- User login log [link](https://stackoverflow.com/questions/37618473/how-can-i-log-both-successful-and-failed-login-and-logout-attempts-in-django)
 - Deploy!
 - To phone
 

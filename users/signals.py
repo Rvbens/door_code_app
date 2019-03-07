@@ -18,6 +18,7 @@ def save_profile(sender, instance, **kwargs):
 def active(sender, instance, **kwargs):
         if instance.is_active and User.objects.filter(pk=instance.pk, is_active=False).exists():
                 subject = 'Cuenta activada'
-                mesagge = f'{instance.username} ha sido activada'
+                mesagge = f'Su cuenta {instance.username} ha sido activada. Ya puede entrar cuando quiera'
                 from_email = settings.EMAIL_HOST_USER
                 send_mail(subject, mesagge, from_email, [instance.email], fail_silently=False)
+
