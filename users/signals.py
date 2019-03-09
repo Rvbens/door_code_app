@@ -5,6 +5,7 @@ from .models import Profile, CustomUser
 from django.core.mail import send_mail
 from django.conf import settings
 
+
 @receiver(post_save, sender=CustomUser)
 def create_profile(sender, instance, created, **kwargs):
         if created:
@@ -21,4 +22,3 @@ def active(sender, instance, **kwargs):
                 mesagge = f'Su cuenta {instance.username} ha sido activada. Ya puede entrar cuando quiera'
                 from_email = settings.EMAIL_HOST_USER
                 send_mail(subject, mesagge, from_email, [instance.email], fail_silently=False)
-

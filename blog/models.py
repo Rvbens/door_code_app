@@ -14,3 +14,14 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse("blog-home")
+
+class RegistroActividad(models.Model):
+    ip = models.GenericIPAddressField(null=True)
+    usuario = models.CharField(max_length=256, null=True)
+    fecha = models.DateTimeField(null=True, blank=True)
+
+    def __unicode__(self):
+        return '{0} - {1} - {2}'.format(self.action, self.username, self.ip)
+
+    def __str__(self):
+        return '{0} - {1} - {2}'.format(self.action, self.username, self.ip)

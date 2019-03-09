@@ -3,8 +3,18 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, UpdateView
 from .models import Post
+from .signals import home_signal
+from django.contrib.auth.decorators import login_required
 
-class HomeView(LoginRequiredMixin, ListView):
+@login_required
+def home(request):
+    context = { 'posts': Post.objects.all()}
+    ip = request.META.get('REMOTE_ADDR')
+    home_signal.send(sender=None, usuario=request.user.username, ip=ip)#send signal to log user activity
+    return render(request,"blog/home.html",context)
+
+
+class HomeView(LoginRequiredMixin, ListView):#unused
     model = Post
     template_name = "blog/home.html"
     context_object_name = "posts"
