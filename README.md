@@ -7,7 +7,6 @@ The project can evolve in the future, by making the app generate the code and co
 TODO:
 
 - Port to phone
-  - Make logo
   - Import APK
   - Upload to app store
 
