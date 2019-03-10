@@ -8,10 +8,11 @@ TODO:
 
 - Make sessions permanent
 - Port to phone
-   - Adapt responsive style
-   - Make logo
-   - Import APK
-   - Upload to app store
+  - Adapt responsive style DONE
+  - Extend admin with a div with 3 buttons: link to change code, link to active user, link to registro actividad
+  - Make logo
+  - Import APK
+  - Upload to app store
 
 CREDITS:
 
