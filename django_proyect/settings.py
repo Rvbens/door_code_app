@@ -139,6 +139,6 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 EMAIL_ADMIN = os.environ.get('EMAIL_ADMIN')
 
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
-SESSION_COOKIE_AGE = 3600
+SESSION_COOKIE_AGE = 60*60*24*365*100 #100 años
 
 django_heroku.settings(locals())

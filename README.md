@@ -6,10 +6,7 @@ The project can evolve in the future, by making the app generate the code and co
 
 TODO:
 
-- Make sessions permanent
 - Port to phone
-  - Adapt responsive style DONE
-  - Extend admin with a div with 3 buttons: link to change code, link to active user, link to registro actividad
   - Make logo
   - Import APK
   - Upload to app store
